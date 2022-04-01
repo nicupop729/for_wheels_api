@@ -19,6 +19,13 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_01_154417) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_users_on_name", unique: true
-  end
 
+  create_table "cars", force: :cascade do |t|
+    t.string "img_url"
+    t.string "model"
+    t.string "description"
+    t.float "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 end
