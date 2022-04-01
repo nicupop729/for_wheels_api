@@ -1,12 +1,16 @@
 class UsersController < ApplicationController
   def index
-    @users = User.all
-    render json: { status: 'OK', message: 'Users are here', data: @users }, status: :ok
+    users = User.all
+    render json: { status: 'OK', message: 'Users are here', data: users }, status: :ok
   end
 
   def log_in
     user = User.where(name: params[:name])
-    render json: { status: 'OK', message: 'User found', data: user }, status: :ok
+    if user.empty?
+      render json: { status: 'ERROR', message: 'User not found' }, status: 404
+    else
+      render json: { status: 'OK', message: 'User found', data: user }, status: :ok
+    end
   end
 
   def create
@@ -17,14 +21,13 @@ class UsersController < ApplicationController
         message: 'New user created'
       }
     else
-      render json: { errors: new_user.errors,
-                     status: 422 }, status: 422
+      render json: { status: 'ERROR', errors: 'User name already exists' }, status: 422
     end
   end
 
   private
 
   def user_params
-    params.permit(:name)
+    params.require(:user).permit(:name)
   end
 end
