@@ -11,16 +11,15 @@ class UsersController < ApplicationController
 
   def create
     new_user = User.new(user_params)
-      if new_user.save
-        render status: 201, json: {
+    if new_user.save
+      render status: 201, json: {
         status: 'OK',
         message: 'New user created'
       }
-      else
-        render json: { errors: new_user.errors,
+    else
+      render json: { errors: new_user.errors,
                      status: 422 }, status: 422
-      end
-  
+    end
   end
 
   private
