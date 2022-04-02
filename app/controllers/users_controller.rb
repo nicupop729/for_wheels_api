@@ -13,6 +13,11 @@ class UsersController < ApplicationController
     end
   end
 
+  def show
+    user = User.find(params[:id])
+    render json: { status: 'OK', message: 'User found', data: user }, status: :ok
+  end
+
   def create
     new_user = User.new(user_params)
     if new_user.save
