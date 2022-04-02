@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :set_user, only: [:show]
+
   def index
     users = User.all
     render json: { status: 'OK', message: 'Users are here', data: users }, status: :ok
@@ -14,13 +16,12 @@ class UsersController < ApplicationController
   end
 
   def show
-    user = User.find(params[:id])
-    render json: { status: 'OK', message: 'User found', data: user }, status: :ok
+    render json: { status: 'OK', message: 'User found', data: @user }, status: :ok
   end
 
   def create
-    new_user = User.new(user_params)
-    if new_user.save
+    user = User.new(user_params)
+    if user.save
       render status: 201, json: {
         status: 'OK',
         message: 'New user created'
@@ -31,6 +32,10 @@ class UsersController < ApplicationController
   end
 
   private
+  
+  def set_user
+    @user = User.find(params[:id])
+  end
 
   def user_params
     params.require(:user).permit(:name)

@@ -1,4 +1,6 @@
 class RentalsController < ApplicationController
+    before_action :set_rental, only: [:destroy]
+
     def index
         user = User.find(params[:user_id])
         rentals = user.rentals
@@ -24,8 +26,7 @@ class RentalsController < ApplicationController
     end
 
     def destroy
-        rental = Rental.find(params[:id])
-        rental.destroy
+        @rental.destroy
         render status: 200, json: {
             status: 'OK',
             message: 'Rental deleted'
@@ -33,6 +34,10 @@ class RentalsController < ApplicationController
     end
 
     private
+
+    def set_rental
+        @rental = Rental.find(params[:id])
+    end
 
     def rental_params
         params.require(:rental).permit(:user_id, :car_id, :start_date, :end_date)
