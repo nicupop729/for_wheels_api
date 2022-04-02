@@ -2,6 +2,7 @@ class Rental < ApplicationRecord
     belongs_to :user
     belongs_to :car
     
+    validates :price, presence: true
     validates :user_id, presence: true
     validates :car_id, presence: true
     validates :start_date, presence: true
