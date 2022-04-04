@@ -1,4 +1,4 @@
-class RentalsController < ApplicationController::API
+class RentalsController < ApplicationController
   before_action :set_rental, only: [:destroy]
 
   def index
