@@ -8,8 +8,7 @@ class RentalsController < ApplicationController
   end
 
   def show
-    user = User.find(params[:user_id])
-    rental = user.rentals.find(params[:id])
+    rental = Rental.find(params[:id])
     render json: { status: 'OK', message: 'Rental is here', data: rental }.to_json, status: :ok
   end
 
