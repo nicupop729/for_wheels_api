@@ -28,7 +28,7 @@ class RentalsController < ApplicationController
     @rental.destroy
     render status: 200, json: {
       status: 'OK',
-      message: 'Rental deleted'
+      message: 'Car rental cancelled successfully'
     }.to_json
   end
 
