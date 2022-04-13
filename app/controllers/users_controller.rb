@@ -24,7 +24,7 @@ class UsersController < ApplicationController
     if user.save
       render status: 201, json: {
         status: 'OK',
-        message: 'New user created'
+        message: 'New user account created! Welcome!'
       }.to_json
     else
       render json: { status: 'ERROR', errors: 'User name already exists' }.to_json, status: 422
