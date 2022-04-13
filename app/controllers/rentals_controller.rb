@@ -3,7 +3,7 @@ class RentalsController < ApplicationController
 
   def index
     user = User.find(params[:user_id])
-    rentals = user.rentals
+    rentals = user.rentals.order(start_date: :asc)
     render json: { status: 'OK', message: 'Rentals are here', data: rentals }.to_json, status: :ok
   end
 
