@@ -6,8 +6,8 @@
 
 ![screenshot](./app/assets/database_for_wheels.png)
 
-Rent one of a kind car, your dream car for **For Wheels**!!
-This SPA takes the information from the back-end API developed by us and. Accordingly to the user interaction, consumes it and renders the data on the UI.
+Rent one of a kind car, your dream car from **For Wheels**!!
+This API provides information for the front-end SPA developed by us and. Accordingly to the user interaction, consumes it and renders the data on the UI.
 
 ## Built With
 
