@@ -2,12 +2,12 @@
 
 # FOR WHEELS API
 
-> An API to server and SPA built by the same team, for a luxury renting cars agency: For Wheels!
+> An API to serve a SPA built by the same team, for a luxury renting cars agency: For Wheels!
 
 ![screenshot](./app/assets/database_for_wheels.png)
 
 Rent one of a kind car, your dream car for **For Wheels**!!
-This SPA takes the information from the back-end API developed by us and, accordingly to the user interaction, consumes it and renders the data on the UI.
+This SPA takes the information from the back-end API developed by us and. Accordingly to the user interaction, consumes it and renders the data on the UI.
 
 ## Built With
 
@@ -20,7 +20,7 @@ This SPA takes the information from the back-end API developed by us and, accord
 [Live Demo Link](https://livedemo.com)
 
 ## Kanban Board
-Please hind Kandban board [here](https://github.com/users/nicupop729/projects/3);
+Please find Kandban board [here](https://github.com/users/nicupop729/projects/3);
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
