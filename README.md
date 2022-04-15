@@ -15,9 +15,9 @@ This API provides information for the front-end SPA developed by us and. Accordi
 - Frameworks: Ruby On Rails
 - Technologies used: PostgreSQL 
 
-## Live Demo -not yet**
+## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://for-wheels-api.herokuapp.com/cars)
 
 ## Kanban Board
 Please find Kandban board [here](https://github.com/users/nicupop729/projects/3);
