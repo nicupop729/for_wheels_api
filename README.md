@@ -21,7 +21,9 @@ This API provides information for the front-end SPA developed by us and. Accordi
 
 ## Kanban Board
 Please find Kandban board [here](https://github.com/users/nicupop729/projects/3);
+
 [Link to initial issue when Knaban Board was set](https://github.com/nicupop729/for_wheels_api/issues/20)
+
 Number of team members for this project: 2;
 
 ## Getting Started
